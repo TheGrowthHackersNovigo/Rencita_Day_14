@@ -101,7 +101,7 @@
     <ui:LogMessage DisplayName="Log Message : start execution" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Execution started &quot;]" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputData]" DisplayName="Read Range Workbook : Input data" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Input" WorkbookPath="Data\Input\Marks Data.xlsx" />
     <ui:LogMessage DisplayName="Log Message : Input read" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Input data read &quot;]" />
-    <Assign sap2010:Annotation.AnnotationText=" Filtering the datatable by removing subject column" DisplayName="Assign : Filtering the datatable by removing subject column" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText=" Filtering the datatable in order to remove subject column" DisplayName="Assign :  Remove subject column" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_FilteredData]</OutArgument>
       </Assign.To>
@@ -114,7 +114,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="Cloning for schema" DisplayName="Assign : Cloning for schema" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap2010:Annotation.AnnotationText="" DisplayName="Assign :clode data table" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_OutputData]</OutArgument>
       </Assign.To>
@@ -127,7 +127,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="Grouping the id and name, and finding the sum of the total marks" DisplayName="Assign : Grouping the id and name, and finding the sum " sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap2010:Annotation.AnnotationText="" DisplayName="Assign : finding the sum " sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_FilteredData]</OutArgument>
       </Assign.To>
@@ -140,7 +140,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="Ordering the total marks in the descending format" DisplayName="Assign : Ordering the total marks" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap2010:Annotation.AnnotationText="sort in decending order" DisplayName="Assign : sort total marks" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_OutputData]</OutArgument>
       </Assign.To>
